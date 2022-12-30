@@ -1,0 +1,63 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: blue;
+    padding: 250px 50px 50px 50px;
+    font-family: 'Pacifico', cursive;
+}
+
+h2{
+    color: white;
+    font-size: 60px;
+    margin-bottom: 60px;
+}
+
+.offer{
+    gap: 3px;
+    position: relative;
+    margin-bottom: 50px;
+    display: inline-flex;
+}
+
+.inp{
+    width: 120px;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.inp::placeholder{
+    color: black;
+}
+
+select{
+    font-size: 20px;
+    padding: 10px 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+button{
+    color: white;
+    display: block;
+    font-size: 20px;
+    transition: 0.4s;
+    padding: 10px 20px;  
+
+    background: black;
+}
+
+button:hover{
+    border-radius: 0px 25px 0px 0px;
+}
+
+.text{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.info{
+    color: white;
+    font-size: 20px;
+}

@@ -44,55 +44,63 @@ inputDay.addEventListener('keypress', function(event){
 });
 
 function startPredection(){
+    if(inputDay.value.length > 0){
+        if(/[a-zA-ZА-Яа-я]+/.test(inputDay.value)){
+            inputDay.value = '';
+            alert('Ведіть будь-ласка лише числа');
+        } else {
+            let values = inputMonth.value + '-' + inputDay.value;
     
-    let values = inputMonth.value + '-' + inputDay.value;
-    
-    let date      = new Date(values);
-    let dateHuman = addZero(date.getMonth() + 1) + '-' + addZero(date.getDate());
-    
-        if(dateHuman >= '01-20' && dateHuman <= '02-18'){
-            text.textContent    = 'Водолій';
-            prediction(arrPredection);
-        }else if(dateHuman >= '02-19' && dateHuman <= '03-20'){
-            text.textContent    = 'Риби';
-            prediction(arrPredection);
-        }else if(dateHuman >= '03-21' && dateHuman <= '04-19'){
-            text.textContent    = 'Овен';
-            prediction(arrPredection);
-        }else if(dateHuman >= '04-20' && dateHuman <= '05-20'){
-            text.textContent    = 'Телець';
-            prediction(arrPredection);
-        }else if(dateHuman >= '05-21' && dateHuman <= '06-20'){
-            text.textContent    = 'Близнюки';
-            prediction(arrPredection);
-        }else if(dateHuman >= '06-21' && dateHuman <= '07-22'){
-            text.textContent    = 'Рак';
-            prediction(arrPredection);
-        }else if(dateHuman >= '07-23' && dateHuman <= '08-22'){
-            text.textContent    = 'Лев';
-            prediction(arrPredection);
-        }else if(dateHuman >= '08-23' && dateHuman <= '09-22'){
-            text.textContent    = 'Діва';
-            prediction(arrPredection);
-        }else if(dateHuman >= '09-23' && dateHuman <= '10-22'){
-            text.textContent    = 'Терези';
-            prediction(arrPredection);
-        }else if(dateHuman >= '10-23' && dateHuman <= '11-21'){
-            text.textContent    = 'Скорпіон';
-            prediction(arrPredection);
-        }else if(dateHuman >= '11-22' && dateHuman <= '12-21'){
-            text.textContent    = 'Стрілець';
-            prediction(arrPredection);
-        }else if(dateHuman >= '12-22' && dateHuman <= '01-19'){   
-            text.textContent    = 'Козеріг';
-            prediction(arrPredection);
-        }else if(dateHuman >= '01-01' && dateHuman <= '01-19'){ // <- Виправив баг з 'Водолій'
-            text.textContent    = 'Водолій';
-            prediction(arrPredection);
+            let date      = new Date(values);
+            let dateHuman = addZero(date.getMonth() + 1) + '-' + addZero(date.getDate());
+            
+                if(dateHuman >= '01-20' && dateHuman <= '02-18'){
+                    text.textContent    = 'Водолій';
+                    prediction(arrPredection);
+                }else if(dateHuman >= '02-19' && dateHuman <= '03-20'){
+                    text.textContent    = 'Риби';
+                    prediction(arrPredection);
+                }else if(dateHuman >= '03-21' && dateHuman <= '04-19'){
+                    text.textContent    = 'Овен';
+                    prediction(arrPredection);
+                }else if(dateHuman >= '04-20' && dateHuman <= '05-20'){
+                    text.textContent    = 'Телець';
+                    prediction(arrPredection);
+                }else if(dateHuman >= '05-21' && dateHuman <= '06-20'){
+                    text.textContent    = 'Близнюки';
+                    prediction(arrPredection);
+                }else if(dateHuman >= '06-21' && dateHuman <= '07-22'){
+                    text.textContent    = 'Рак';
+                    prediction(arrPredection);
+                }else if(dateHuman >= '07-23' && dateHuman <= '08-22'){
+                    text.textContent    = 'Лев';
+                    prediction(arrPredection);
+                }else if(dateHuman >= '08-23' && dateHuman <= '09-22'){
+                    text.textContent    = 'Діва';
+                    prediction(arrPredection);
+                }else if(dateHuman >= '09-23' && dateHuman <= '10-22'){
+                    text.textContent    = 'Терези';
+                    prediction(arrPredection);
+                }else if(dateHuman >= '10-23' && dateHuman <= '11-21'){
+                    text.textContent    = 'Скорпіон';
+                    prediction(arrPredection);
+                }else if(dateHuman >= '11-22' && dateHuman <= '12-21'){
+                    text.textContent    = 'Стрілець';
+                    prediction(arrPredection);
+                }else if(dateHuman >= '12-22' && dateHuman <= '01-19'){   
+                    text.textContent    = 'Козеріг';
+                    prediction(arrPredection);
+                }else if(dateHuman >= '01-01' && dateHuman <= '01-19'){ // <- Виправив баг з 'Водолій'
+                    text.textContent    = 'Водолій';
+                    prediction(arrPredection);
+                }
+            
+                inputMonth.value = '1';
+                inputDay.value   = '';
         }
-    
-        inputMonth.value = '1';
-        inputDay.value   = '';
+    } else {
+        alert('Інпут порожній');
+    }
 }
 
 function addZero(num) {

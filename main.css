@@ -61,3 +61,28 @@ button:hover{
     color: white;
     font-size: 20px;
 }
+
+@media screen and (max-width: 576px) {
+    .container{
+        width: 90%;
+        margin:  0 auto;
+        padding: 50px 15px 50px 15px;
+    }
+
+    .offer{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    h2{
+        font-size: 45px;
+    }
+
+    .offerselect,.inp{
+        width: 100%;
+    }
+
+    .inp{
+        margin: 20px 0px;
+    }
+}
